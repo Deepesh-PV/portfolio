@@ -6,12 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Deepesh P V | AI Engineering Portfolio</title>
     <style>
+        /* Global Styles */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #1e1e1e;
             color: #ddd;
             margin: 0;
             padding: 0;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         header {
@@ -27,7 +37,7 @@
 
         section {
             padding: 2rem;
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
         }
 
@@ -43,24 +53,21 @@
             padding-left: 1.5rem;
         }
 
+        /* Project Cards */
         .project-card {
             background-color: #2d2d2d;
-            padding: 1rem;
-            margin-bottom: 1rem;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1.5rem;
             border-radius: 6px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+            box-shadow: 0 1px 6px rgba(0,0,0,0.6);
             border: 1px solid #444;
         }
 
-        a {
-            color: #58a6ff;
-            text-decoration: none;
+        .project-card h3 {
+            margin-top: 0;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
+        /* Contact Form */
         form {
             display: flex;
             flex-direction: column;
@@ -105,6 +112,7 @@
             background-color: #0d1117;
             color: #555;
         }
+
     </style>
 </head>
 
@@ -114,6 +122,7 @@
         <p>Artificial Intelligence Engineering Student</p>
     </header>
 
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
         <p>
@@ -121,6 +130,7 @@
         </p>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
         <ul>
@@ -133,6 +143,7 @@
         </ul>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
 
@@ -204,8 +215,20 @@
             </p>
         </div>
 
+        <div class="project-card">
+            <h3><a href="https://github.com/Deepesh-PV?tab=repositories" target="_blank">🧠 Brain Tumor Classification — ResNet Model</a></h3>
+            <p>
+                AI-powered project that classifies brain tumors using a ResNet deep learning model.<br/><br/>
+                <strong>Features:</strong><br/>
+                🔬 Brain Tumor Detection from MRI scans<br/>
+                🧠 Uses ResNet for high accuracy classification<br/>
+                🌐 Live Demo: <a href="https://resnetbrain.streamlit.app/" target="_blank">resnetbrain.streamlit.app</a><br/><br/>
+                Helps medical professionals and students quickly identify tumor types from MRI images.
+            </p>
+        </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
         <form id="contact-form">
@@ -221,6 +244,7 @@
         <p>© 2025 Deepesh P V | AI Engineering Student</p>
     </footer>
 
+    <!-- JavaScript for Contact Form -->
     <script>
         document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
@@ -232,7 +256,6 @@
             if (name && email && message) {
                 document.getElementById('form-status').textContent = 'Thank you for your message!';
                 document.getElementById('form-status').style.color = '#28a745';
-
                 document.getElementById('contact-form').reset();
             } else {
                 document.getElementById('form-status').textContent = 'Please fill out all fields.';
